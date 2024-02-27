@@ -13,6 +13,14 @@ const userSchema = new mongoose.Schema({
   githubLink: { type: String, required: false },
   lastLogin: { type: Date, required: false }, //TODO: Check this 
 
+
+  currentlyAssignedTasks: [{
+    id: { type: String, required: true },
+    //TODO: More ID to go here
+  }],
+
+  //TODO: Maybe this should go in its own DB
+  permissions: { type: String, required: true }
 })
 
 const User = mongoose.model('User', userSchema);
